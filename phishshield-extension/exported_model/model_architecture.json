@@ -1,0 +1,41 @@
+{
+  "layers": [
+    {
+      "class_name": "Dense",
+      "units": 64,
+      "activation": "relu"
+    },
+    {
+      "class_name": "Dropout",
+      "rate": 0.3
+    },
+    {
+      "class_name": "Dense",
+      "units": 32,
+      "activation": "relu"
+    },
+    {
+      "class_name": "Dropout",
+      "rate": 0.2
+    },
+    {
+      "class_name": "Dense",
+      "units": 16,
+      "activation": "relu"
+    },
+    {
+      "class_name": "Dense",
+      "units": 1,
+      "activation": "sigmoid"
+    }
+  ],
+  "input_shape": [
+    null,
+    12
+  ],
+  "output_shape": [
+    null,
+    1
+  ],
+  "total_params": 3457
+}

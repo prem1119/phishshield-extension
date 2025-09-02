@@ -1,0 +1,20 @@
+{
+  "input_shape": [
+    16
+  ],
+  "output_shape": [
+    2
+  ],
+  "total_params": 20,
+  "feature_count": 16,
+  "training_date": "2025-08-22 03:21:20",
+  "model_type": "Best Model (Gradient Boosting)",
+  "architecture": "Enhanced 16-Feature Model",
+  "performance": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "training_notes": "Model trained on 412 samples with 1.0000 accuracy. Features extracted from real phishing and legitimate URLs with enhanced detection patterns."
+}

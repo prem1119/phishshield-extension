@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "PhishShield - Universal ML Phishing Detection",
+  "version": "1.0",
+  "description": "🛡️ Universal phishing detection using REAL Machine Learning (Neural Network + Heuristics). Works on Chrome, Firefox, Safari, Edge, and all modern browsers! Protects users from phishing websites with trained ML model and detailed explanations.",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["trained-ml-model.js", "exported_model/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "browser_specific_settings": {
+    "safari": {
+      "strict_min_version": "16.0"
+    }
+  }
+}
